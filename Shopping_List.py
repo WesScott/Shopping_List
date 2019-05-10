@@ -64,6 +64,14 @@ def createFile():
         newFile.write("\n")
     newFile.close()
 
+def deleteItem(item):
+    global GroceryList
+    for Item in GroceryList:
+        if item == Item:
+            GroceryList.remove(item)
+            print("removed {}".format(item))
+    writeToFile()
+    return
 
 # processChoice(choice) takes in a string and process the correct actions in accordance to mainMenu()
 def processChoice(choice):
@@ -78,6 +86,9 @@ def processChoice(choice):
         createFile()
     elif choice == "4":
         clearList()
+    elif choice == "5":
+        toDel = str(input("\nEnter the item you wish to delete:\n>>"))
+        deleteItem(toDel)
     elif choice in quitList:
         return
     else:
@@ -90,6 +101,7 @@ def mainMenu():
     print("2) Add item to List")
     print("3) Make printable list")
     print("4) Clear list")
+    print("5) Delete an Item")
     userIn = str(input(">>"))
     processChoice(userIn)
 
