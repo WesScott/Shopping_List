@@ -32,6 +32,7 @@ def showList():
     count = 1
     for item in GroceryList:
         print("{}) {}".format(count, item))
+        count += 1
     return
 
 # addItem(item) will add an item to the grocery list, as well as rewrite the list to the file:
