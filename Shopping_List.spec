@@ -4,9 +4,9 @@ block_cipher = None
 
 
 a = Analysis(['Shopping_List.py'],
-             pathex=['C:\\Users\\Wes\\Documents\\Repos\\Shopping_List'],
+             pathex=['D:\\Repositories\\Shopping_List'],
              binaries=[],
-             datas=[('list.txt', 'list.txt')],
+             datas=[],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
